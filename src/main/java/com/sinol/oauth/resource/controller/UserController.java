@@ -12,7 +12,7 @@ public class UserController {
 	@RequestMapping("/profile")
 	@PreAuthorize("#oauth2.hasAnyScope('read')")
 	public @ResponseBody String getRandomMessage() {
-		return "Sinol user";
+		return "This is my user profile";
 	}
 	
 }
