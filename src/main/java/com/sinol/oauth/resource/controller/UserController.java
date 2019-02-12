@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("oauth2")
+@RequestMapping("user")
 public class UserController {
 
-	@RequestMapping("/secured")
+	@RequestMapping("/profile")
 	@PreAuthorize("#oauth2.hasAnyScope('read')")
-	public @ResponseBody String getRandomMessage(OAuth2Authentication auth) {
+	public @ResponseBody String getOauth2Principal(OAuth2Authentication auth) {
 		return "Access granted for " + auth.getPrincipal();
 	}
 	
