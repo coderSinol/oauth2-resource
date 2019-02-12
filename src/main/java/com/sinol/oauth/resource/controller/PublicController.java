@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class PublicController {
 
 	@RequestMapping("/welcome")
-	public @ResponseBody String getRandomMessage() {
-		return "Good evening";
+	public @ResponseBody String getGreeting() {
+		return "Hey Good Day!";
 	}
 
 }
